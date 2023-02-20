@@ -29,7 +29,7 @@
           :class="{ 'h-10': clicked, 'w-10': clicked, 'bg-white': clicked }"
           @click="onClick"
         >
-          <key-icon />
+          <router-link to="/access-keys"><key-icon /></router-link>
         </button>
         <button
           class="bg-white text-dark font-medium p-2 mt-4 rounded-full ml-auto flex items-center justify-center"

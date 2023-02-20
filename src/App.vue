@@ -1,4 +1,5 @@
 <template>
+  <router-view />
   <div class="invisible absolute z-20 top-0 left-0 w-full p-4 bg-error text-dark shadow-md">
     <p>&#127881; {{ notify.message }}</p>
   </div>
@@ -41,7 +42,7 @@
           </button>
         </div>
         <div class="bg-code rounded-lg p-4">
-          <pre v-highlightjs><code class="javascript">
+          <pre v-highlightjs><code class="bg-code javascript">
           curl -X POST 'https://{{ code.accessToken }}@nodeless.xyz/{{ code.route }}' \
           -H 'Content-Type: application/json' \
           --data-raw '{
