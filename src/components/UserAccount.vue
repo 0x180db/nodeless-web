@@ -11,10 +11,10 @@
       </button>
       <div v-if="clicked" class="flex flex-col text-dark">
         <div class="flex items-center justify-between">
-          <div class="flex items-center justify-between mx-4">
-            <warn-icon colorHex="#EF4444" class="mx-2" />
-            <p class="text-error text-base font-medium">{{ balance }}</p>
-            <p class="text-error text-base font-medium pl-1">USDT</p>
+          <div class="flex items-center justify-between mx-4 pl-2 pr-4 h-10 bg-white rounded-full">
+            <warn-icon colorHex="#EF4444" />
+            <p class="text-error text-base font-medium ml-2 mr-1">{{ balance }}</p>
+            <p class="text-error text-base font-medium">USDT</p>
           </div>
           <button
             class="bg-white text-dark font-medium p-2 rounded-full flex items-center justify-center"
@@ -36,7 +36,7 @@
           :class="{ 'h-10': clicked, 'w-10': clicked, 'bg-white': clicked }"
           @click="onClick"
         >
-          <bag-icon />
+          <card-icon />
         </button>
         <button
           class="bg-white text-dark font-medium p-2 mt-4 rounded-full ml-auto flex items-center justify-center"
@@ -61,7 +61,7 @@
 import WarnIcon from '@/components/icons/WarnIcon.vue'
 import LogoutIcon from '@/components/icons/LogoutIcon.vue'
 import KeyIcon from '@/components/icons/KeyIcon.vue'
-import BagIcon from '@/components/icons/BagIcon.vue'
+import CardIcon from '@/components/icons/CardIcon.vue'
 import ChatIcon from '@/components/icons/ChatIcon.vue'
 import SettingsIcon from '@/components/icons/SettingsIcon.vue'
 
@@ -70,7 +70,7 @@ export default {
     WarnIcon,
     LogoutIcon,
     KeyIcon,
-    BagIcon,
+    CardIcon,
     ChatIcon,
     SettingsIcon,
   },
