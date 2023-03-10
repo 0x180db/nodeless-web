@@ -2,11 +2,14 @@
   <div class="invisible absolute z-20 top-0 left-0 w-full p-4 bg-error text-dark shadow-md">
     <p>&#127881; {{ notify.message }}</p>
   </div>
-  <div class="bg-gradient-to-l from-primary to-secondary rounded-3xl p-8">
+  <div
+    class="rounded-3xl p-8"
+    :class="[$route.path === '/' ? 'bg-gradient-to-r from-primary to-secondary' : 'bg-transparent']"
+  >
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <img src="@/assets/logo.svg" class="w-10 h-10 rounded-full" />
-      <user-account /> 
+      <user-account />
     </div>
     <router-view />
   </div>
@@ -32,16 +35,11 @@
       </div>
     </div>
   </div>
-  <div v-if="$route.path === '/'" class="container mx-auto py-8">
+  <div v-if="$route.path === '/'" class="container-xl mx-auto py-8">
     <div class="text-center mb-4">
       <h2 class="text-3xl font-bold">Why Nodeless?</h2>
     </div>
-    <div class="flex flex-row justify-center">
-      <benefit-panel title="Zero cost development" description="Description 1" />
-      <benefit-panel title="Zero Limits" description="Description 2" />
-      <benefit-panel title="Zero Stress" description="Description 3" />
-      <benefit-panel title="Zero Tracking" description="Description 4" />
-    </div>
+    <benefit-section />
   </div>
   <div v-if="$route.path === '/'" class="container mx-auto py-8">
     <div class="text-center mb-4">
@@ -74,13 +72,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import UserAccount from '@/components/UserAccount.vue'
-import BenefitPanel from '@/components/BenefitPanel.vue'
+import BenefitSection from '@/components/BenefitSection.vue'
 import PricingSection from '@/components/PricingSection.vue'
 import FooterSection from '@/components/FooterSection.vue'
 
 export default defineComponent({
   components: {
-    BenefitPanel,
+    BenefitSection,
     PricingSection,
     FooterSection,
     UserAccount,

@@ -18,6 +18,8 @@ module.exports = {
       error: '#EF4444',
       warning: '#FCD34D',
       success: '#34D399',
+      link: '#60A5FA',
+      gray: 'rgb(148 163 184)',
     },
     screens: {
       xs: { max: '600px' },

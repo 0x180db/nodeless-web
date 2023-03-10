@@ -28,7 +28,7 @@
       </div>
       <div class="bg-code rounded-lg p-4">
         <pre v-highlightjs><code class="bg-code javascript">
-          curl -X POST 'https://{{ code.accessToken }}@nodeless.xyz/{{ code.route }}' \
+          curl -X POST 'https://go.nodeless.xyz/{{ code.accessToken }}' \
           -H 'Content-Type: application/json' \
           --data-raw '{
             "jsonrpc": "2.0",
@@ -52,8 +52,7 @@ export default {
   data() {
     return {
       code: {
-        accessToken: '{{ access-token }}',
-        route: '{{ route }}',
+        accessToken: '{{ connect-for-access-token }}',
       },
       copyButton: {
         text: 'Copy',
